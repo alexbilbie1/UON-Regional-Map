@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <title>Regional Maps</title>
 </head>
 <body>
@@ -11,91 +11,100 @@
     <span style="vertical-align: middle; padding-left: 1cm; color: #f5f5f5;">THE UNIVERSAL ORDER OF NATIONS</span>
 </div>
 
-<div id="earth">
-  <img id="earthmap" src="https://i.imgur.com/bRqE1qn.png" style="width: 100%;">
+<div class="tab">
+  <button style="font-weight: 900" class="tablinks" onclick="openMap(event, 'EarthMapAll')" id="defaultOpen">EARTH</button>
+  <button style="font-weight: 900" id="spaceButton" class="tablinks" onclick="openMap(event, 'Space')">SPACE</button>
+  </div>
+
+<div id="EarthMapAll" class="tabcontent">
+  <div id="earth">
+    <img id="earthmap" src="https://i.imgur.com/bRqE1qn.png" style="width: 100%;">
+  </div>
+  
+  <div id="earthlegend">
+    <table style="table-layout: fixed; width: 78%; text-align: left;  " align="center">
+        <tr>
+          <th class="ELHeadings">AFRICA</th>
+          <th class="ELHeadings">ASIA</th>
+          <th class="ELHeadings">AUSTRALIA</th>
+          <th class="ELHeadings">EUROPE</th>
+        </tr>
+        <tr>
+          <th><ul style="list-style:none; font-size: 19px; font-weight: 800;">
+            <li><div class="box tribes"></div>21 TRIBES</li>
+            <li><div class="box ash"></div>THE UNITED LANDS OF ASH</li>
+            <li><div class="box cccp"></div>CCCP</li>
+            <li><div class="box dominion"></div>DOMINION OF N.W. AFRICA</li>
+            <li><div class="box LoP"></div>LEGION OF PEACE</li>
+            <li><div class="box PGF"></div>PINO GRAND FENWICK</li>
+            <li><div class="box prussoivoria"></div>PRUSSO IVORIA</li>
+            <li><div class="box prussia"></div>THE PRUSSIAN RAUMREICH</li>
+            <li><div class="box salani"></div>SALANI</li>
+          </ul></th>
+          
+          <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
+            <li><div class="box hawaii"></div>HAWAIIAN BANANA REPUBLIC</li>
+            <li><div class="box ash"></div>THE UNITED LANDS OF ASH</li>
+            <li><div class="box PGF"></div>PINO GRAND FENWICK</li>
+            <li><div class="box RDA"></div>REPUBLIC DEFENCE ARMY</li>
+            <li><div class="box UPR"></div>UNITED PROVINCES OF REPUBLICA</li>
+          </ul></th>
+          
+          <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
+            <li><div class="box ash"></div>THE UNITED LANDS OF ASH</li>
+            <li><div class="box cccp"></div>CCCP</li>
+            <li><div class="box saltrandra"></div>SALTRANDRA</li>
+            <li><div class="box teut"></div>TEUTIONIA</li>
+            <li><div class="box tribes"></div>21 TRIBES</li>
+            <li><div class="box UPR"></div>UNITED PROVINCES OF REPUBLICA</li>
+            <li><div class="box suburbia"></div>WEST SUBURBIA</li>
+          </ul></th>
+          <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
+            <li><div class="box tribes"></div>THE TRIBAL COMMONWEALTH</li>
+            <li><div class="box cali"></div>CALICATHIA</li>
+            <li><div class="box spanishconfederation"></div>THE SPANISH CONFEDERATION</li>
+            <li><div class="box scotland"></div>THE FREE SCOTTISH UNION</li>
+            <li><div class="box frenchkingdom"></div>THE NEW FRENCH KINGDOM</li>
+            <li><div class="box PGF"></div>PINO GRAND FENWICK</li>
+            <li><div class="box prosperity"></div>PROSPERITY</li>
+            <li><div class="box spanishrepublic"></div>THE SPANISH REPUBLIC</li>
+            <li><div class="box teut"></div>TEUTIONIA</li>
+          </ul></th>
+        </tr>
+        <tr>
+          <th class="ELHeadings"></th>
+          <th class="ELHeadings">NORTH AMERICA</th>
+          <th class="ELHeadings">SOUTH AMERICA</th>
+          <th class="ELHeadings"></th>
+        </tr>
+        <tr>
+          <th></th>
+          <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
+            <li><div class="box cccp"></div>CCCP</li>
+            <li><div class="box fci"></div>CONFEDERATE IMPERIUM</li>
+            <li><div class="box california"></div>NOVAYA CALIFORNIA</li>
+            <li><div class="box rda"></div>REPUBLIC DEFENCE ARMY</li>
+            <li><div class="box sanfran"></div>SAN FRANCISCO</li>
+            <li><div class="box suburbia"></div>WEST SUBURBIA</li>
+          </ul></th>
+          <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
+            <li><div class="box cccp"></div>CCCP</li>
+            <li><div class="box cali"></div>CALICATHIA</li>
+            <li><div class="box argo"></div>NOVA ARGONIA</li>
+            <li><div class="box mant"></div>MANTEÑOS</li>
+            <li><div class="box ugr"></div>THE GREATER REPUBLICS</li>
+            <li><div class="box suburbia"></div>WEST SUBURBIA</li>
+          </ul></th>
+        </tr>
+    </table>
+  </div>
 </div>
 
-<div id="earthlegend">
-  <table style="table-layout: fixed; width: 78%; text-align: left;  " align="center">
-      <tr>
-        <th class="ELHeadings">AFRICA</th>
-        <th class="ELHeadings">ASIA</th>
-        <th class="ELHeadings">AUSTRALIA</th>
-        <th class="ELHeadings">EUROPE</th>
-      </tr>
-      <tr>
-        <th><ul style="list-style:none; font-size: 19px; font-weight: 800;">
-          <li><div class="box tribes"></div>21 TRIBES</li>
-          <li><div class="box ash"></div>THE UNITED LANDS OF ASH</li>
-          <li><div class="box cccp"></div>CCCP</li>
-          <li><div class="box dominion"></div>DOMINION OF N.W. AFRICA</li>
-          <li><div class="box LoP"></div>LEGION OF PEACE</li>
-          <li><div class="box PGF"></div>PINO GRAND FENWICK</li>
-          <li><div class="box prussoivoria"></div>PRUSSO IVORIA</li>
-          <li><div class="box prussia"></div>THE PRUSSIAN RAUMREICH</li>
-          <li><div class="box salani"></div>SALANI</li>
-        </ul></th>
-        
-        <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
-          <li><div class="box hawaii"></div>HAWAIIAN BANANA REPUBLIC</li>
-          <li><div class="box ash"></div>THE UNITED LANDS OF ASH</li>
-          <li><div class="box PGF"></div>PINO GRAND FENWICK</li>
-          <li><div class="box RDA"></div>REPUBLIC DEFENCE ARMY</li>
-          <li><div class="box UPR"></div>UNITED PROVINCES OF REPUBLICA</li>
-        </ul></th>
-        
-        <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
-          <li><div class="box ash"></div>THE UNITED LANDS OF ASH</li>
-          <li><div class="box cccp"></div>CCCP</li>
-          <li><div class="box saltrandra"></div>SALTRANDRA</li>
-          <li><div class="box teut"></div>TEUTIONIA</li>
-          <li><div class="box tribes"></div>21 TRIBES</li>
-          <li><div class="box UPR"></div>UNITED PROVINCES OF REPUBLICA</li>
-          <li><div class="box suburbia"></div>WEST SUBURBIA</li>
-        </ul></th>
-        <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
-          <li><div class="box tribes"></div>THE TRIBAL COMMONWEALTH</li>
-          <li><div class="box cali"></div>CALICATHIA</li>
-          <li><div class="box spanishconfederation"></div>THE SPANISH CONFEDERATION</li>
-          <li><div class="box scotland"></div>THE FREE SCOTTISH UNION</li>
-          <li><div class="box frenchkingdom"></div>THE NEW FRENCH KINGDOM</li>
-          <li><div class="box PGF"></div>PINO GRAND FENWICK</li>
-          <li><div class="box prosperity"></div>PROSPERITY</li>
-          <li><div class="box spanishrepublic"></div>THE SPANISH REPUBLIC</li>
-          <li><div class="box teut"></div>TEUTIONIA</li>
-        </ul></th>
-      </tr>
-      <tr>
-        <th class="ELHeadings"></th>
-        <th class="ELHeadings">NORTH AMERICA</th>
-        <th class="ELHeadings">SOUTH AMERICA</th>
-        <th class="ELHeadings"></th>
-      </tr>
-      <tr>
-        <th></th>
-        <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
-          <li><div class="box cccp"></div>CCCP</li>
-          <li><div class="box fci"></div>CONFEDERATE IMPERIUM</li>
-          <li><div class="box california"></div>NOVAYA CALIFORNIA</li>
-          <li><div class="box rda"></div>REPUBLIC DEFENCE ARMY</li>
-          <li><div class="box sanfran"></div>SAN FRANCISCO</li>
-          <li><div class="box suburbia"></div>WEST SUBURBIA</li>
-        </ul></th>
-        <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
-          <li><div class="box cccp"></div>CCCP</li>
-          <li><div class="box cali"></div>CALICATHIA</li>
-          <li><div class="box argo"></div>NOVA ARGONIA</li>
-          <li><div class="box mant"></div>MANTEÑOS</li>
-          <li><div class="box ugr"></div>THE GREATER REPUBLICS</li>
-          <li><div class="box suburbia"></div>WEST SUBURBIA</li>
-        </ul></th>
-      </tr>
-  </table>
+<div id="spacemapall" class="tabcontent">
+  
 </div>
-
   
-  
-  <style>
+<style>
   body {
     margin: 0;
     padding: 0;
@@ -134,7 +143,6 @@
     margin: 1em 0;
     padding: 0 0 0 10px;
   }
-
   li {
     margin: 0.5em 0;
   }
@@ -147,15 +155,12 @@
   margin-right: 15px;
   vertical-align: text-bottom;
   }
-
   .tribes {
     background: #009942;
   }
-
   .ash {
     background: #92b848;
   }
-
   .cccp {
     background: #c7bee6;
   }
@@ -231,5 +236,79 @@
   .ugr {
     background: #35d404;
   }
+
+  div.tab {
+    overflow: hidden;
+    background-color: #191919;
+    text-align: center;
+  }
+
+  div.tab button {
+    background-color: #191919;
+    float: middle;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 20px 22px;
+    transition: 0.1s;
+    font-size: 30px;
+    color: #f5f5f5;
+  }
+
+  #defaultOpen:hover {
+    background-color: #004a7f;
+  }
+  
+  #spaceButton:hover {
+    background-color: #484848;
+  }
+
+  #defaultOpen.active {
+    background-color: #004a7f;
+  }
+  
+  #spaceButton:focus {
+    background-color: #484848;
+  }
+
+  .tabcontent {
+    display: none;
+    border-top: none;
+  }
+  .tabcontent {
+    -webkit-animation: fadeEffect 0.5s;
+    animation: fadeEffect 0.5s;
+  }
+
+  @-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
   </style>
+<script>
+  function openMap(evt, mapName) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    
+    document.getElementById(mapName).style.display = "block";
+    evt.currentTarget.className += " active";
+    
+}
+
+    document.getElementById("defaultOpen").click();
+</script>
 </body>
