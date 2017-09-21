@@ -1,15 +1,5 @@
 <!DOCTYPE html>
 <head>
-  <!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106544095-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments)};
-  gtag('js', new Date());
-
-  gtag('config', 'UA-106544095-1');
-</script>
-
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <title>Regional Maps</title>
 </head>
@@ -23,7 +13,7 @@
 
 <div class="tab">
   <button style="font-weight: 900" class="tablinks" onclick="openMap(event, 'EarthMapAll')" id="defaultOpen">EARTH</button>
-  <button style="font-weight: 900" id="spaceButton" class="tablinks" onclick="openMap(event, 'Space')">SPACE</button>
+  <button style="font-weight: 900" id="spaceButton" class="tablinks" onclick="openMap(event, 'spacemapall')">SPACE</button>
   </div>
 
 <div id="EarthMapAll" class="tabcontent">
@@ -93,7 +83,7 @@
             <li><div class="box cccp"></div>CCCP</li>
             <li><div class="box fci"></div>CONFEDERATE IMPERIUM</li>
             <li><div class="box california"></div>NOVAYA CALIFORNIA</li>
-            <li><div class="box RDA"></div>REPUBLIC DEFENCE ARMY</li>
+            <li><div class="box rda"></div>REPUBLIC DEFENCE ARMY</li>
             <li><div class="box sanfran"></div>SAN FRANCISCO</li>
             <li><div class="box suburbia"></div>WEST SUBURBIA</li>
           </ul></th>
@@ -111,6 +101,49 @@
 </div>
 
 <div id="spacemapall" class="tabcontent">
+  <div id="space">
+    <img src="https://i.imgur.com/Q7WTbmb.png" style="width:60%;">
+  </div>
+  <div id="spacelegend">
+    <table style="table-layout: fixed; width: 78%; text-align: left;  " align="center">
+        <tr>
+          <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
+            <li><div class="box tribes"></div>TEST</li>
+            <li><div class="box ash"></div>TEST</li>
+            <li><div class="box cccp"></div>TEST</li>
+            <li><div class="box dominion"></div>TEST</li>
+            <li><div class="box LoP"></div>TEST</li>
+            <li><div class="box PGF"></div>TEST</li>
+          </ul></th>
+          
+          <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
+            <li><div class="box tribes"></div>TEST</li>
+            <li><div class="box ash"></div>TEST</li>
+            <li><div class="box cccp"></div>TEST</li>
+            <li><div class="box dominion"></div>TEST</li>
+            <li><div class="box LoP"></div>TEST</li>
+            <li><div class="box PGF"></div>TEST</li>
+          </ul></th>
+          
+          <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
+            <li><div class="box tribes"></div>TEST</li>
+            <li><div class="box ash"></div>TEST</li>
+            <li><div class="box cccp"></div>TEST</li>
+            <li><div class="box dominion"></div>TEST</li>
+            <li><div class="box LoP"></div>TEST</li>
+            <li><div class="box PGF"></div>TEST</li>
+          </ul></th>
+          <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
+            <li><div class="box tribes"></div>TEST</li>
+            <li><div class="box ash"></div>TEST</li>
+            <li><div class="box cccp"></div>TEST</li>
+            <li><div class="box dominion"></div>TEST</li>
+            <li><div class="box LoP"></div>TEST</li>
+            <li><div class="box PGF"></div>TEST</li>
+          </ul></th>
+        </tr>
+    </table>
+  </div>
   
 </div>
   
@@ -130,6 +163,13 @@
     vertical-align: middle;
   }
   
+  #space {
+    background: #484848;
+    text-align: center;
+    padding-top: 1cm;
+    
+  }
+  
   #earth {
     text-align: center;
     background: #004a7f;
@@ -140,6 +180,14 @@
   }
   #earthlegend {
     background: #004a7f;
+    color: #f5f5f5;
+    text-align: center;
+    padding-top: 1cm;
+    
+  }
+  
+  #spacelegend {
+    background: #484848;
     color: #f5f5f5;
     text-align: center;
     padding-top: 1cm;
@@ -221,7 +269,7 @@
     background: #9c593d;
   }
   .frenchkingdom {
-    background: #2525b0;
+    background: #9c593d;
   }
   .prosperity {
     background: #48bdbd;
@@ -265,6 +313,7 @@
     transition: 0.1s;
     font-size: 30px;
     color: #f5f5f5;
+    margin: 0;
   }
 
   /* Change background color of buttons on hover */
