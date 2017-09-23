@@ -21,7 +21,7 @@
     <img id="earthmap" src="https://i.imgur.com/bRqE1qn.png" style="width: 100%;">
   </div>
   
-  <div id="earthlegend">
+  <div id="earthlegend" style="overflow-x:auto;">
     <table style="table-layout: fixed; width: 78%; text-align: left;  " align="center">
         <tr>
           <th class="ELHeadings">AFRICA</th>
@@ -102,9 +102,9 @@
 
 <div id="spacemapall" class="tabcontent">
   <div id="space">
-    <img src="https://i.imgur.com/Q7WTbmb.png" style="width:60%;">
+    <img src="https://i.imgur.com/akBPswe.png" style="width:60%;">
   </div>
-  <div id="spacelegend">
+  <div id="spacelegend" style="overflow-x:auto;">
     <table style="table-layout: fixed; width: 78%; text-align: left;  " align="center">
         <tr>
           <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
@@ -167,6 +167,7 @@
     background: #484848;
     text-align: center;
     padding-top: 1cm;
+    image-rendering: crisp-edges;
     
   }
   
@@ -295,14 +296,13 @@
   .ugr {
     background: #35d404;
   }
-  /* Style the tab */
+  
   div.tab {
     overflow: hidden;
     background-color: #191919;
     text-align: center;
   }
 
-  /* Style the buttons inside the tab */
   div.tab button {
     background-color: #191919;
     float: middle;
@@ -316,7 +316,6 @@
     margin: 0;
   }
 
-  /* Change background color of buttons on hover */
   #defaultOpen:hover {
     background-color: #004a7f;
   }
@@ -325,23 +324,21 @@
     background-color: #484848;
   }
 
-  /* Create an active/current tablink class */
   #defaultOpen.active {
     background-color: #004a7f;
   }
   
-  #spaceButton:focus {
+  #spaceButton.active {
     background-color: #484848;
   }
 
-  /* Style the tab content */
   .tabcontent {
     display: none;
     border-top: none;
   }
   .tabcontent {
     -webkit-animation: fadeEffect 0.5s;
-    animation: fadeEffect 0.5s; /* Fading effect takes 1 second */
+    animation: fadeEffect 0.5s;
   }
 
   @-webkit-keyframes fadeEffect {
@@ -356,27 +353,21 @@
   </style>
 <script>
   function openMap(evt, mapName) {
-    // Declare all variables
     var i, tabcontent, tablinks;
 
-    // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
 
-    // Get all elements with class="tablinks" and remove the class "active"
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
-    // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(mapName).style.display = "block";
     evt.currentTarget.className += " active";
-    
 }
-
     document.getElementById("defaultOpen").click();
 </script>
 </body>
