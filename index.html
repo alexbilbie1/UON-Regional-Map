@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <head>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -7,14 +8,13 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:700,800,900&amp;subset=latin-ext" rel="stylesheet">
   
 <div id="heading">
-    <img src="https://i.imgur.com/rlBe9a8.png" style="vertical-align: middle; width: 7%;"/>
-    <span style="vertical-align: middle; padding-left: 1cm; color: #f5f5f5;">THE UNIVERSAL ORDER OF NATIONS</span>
+    <a target="_blank" style="text-decoration: none" href="https://www.nationstates.net/region=the_universal_order_of_nations"><img src="https://i.imgur.com/rlBe9a8.png" style="vertical-align: middle; width: 7%;"/>
+    <span style="vertical-align: middle; padding-left: 1cm; color: #f5f5f5;">THE UNIVERSAL ORDER OF NATIONS</span></a>
+  <button style="font-weight: 900" class="tablinks tab" onclick="openMap(event, 'EarthMapAll')" id="defaultOpen">EARTH</button>
+  <button style="font-weight: 900;" id="spaceButton" class="tablinks tab" onclick="openMap(event, 'spacemapall')">SPACE</button>
+
 </div>
 
-<div class="tab">
-  <button style="font-weight: 900" class="tablinks" onclick="openMap(event, 'EarthMapAll')" id="defaultOpen">EARTH</button>
-  <button style="font-weight: 900" id="spaceButton" class="tablinks" onclick="openMap(event, 'spacemapall')">SPACE</button>
-  </div>
 
 <div id="EarthMapAll" class="tabcontent">
   <div id="earth">
@@ -102,8 +102,9 @@
 
 <div id="spacemapall" class="tabcontent">
   <div id="space">
-    <img src="https://i.imgur.com/akBPswe.png" style="width:60%;">
+    <img  src="https://i.imgur.com/akBPswe.png" style="width: 65%">
   </div>
+  
   <div id="spacelegend" style="overflow-x:auto;">
     <table style="table-layout: fixed; width: 78%; text-align: left;  " align="center">
         <tr>
@@ -155,12 +156,16 @@
     background: #004a7f;
   }
   #heading {
-    background: #191919;
+    background: #1c1b1b;
     padding: 3%;
     font-size: 45px;
     font-weight: 900;
-    text-align: center;
-    vertical-align: middle;
+    text-align: left;
+    display: inline-block;
+  }
+  
+  #spacemapall {
+    background: #484848;
   }
   
   #space {
@@ -297,15 +302,17 @@
     background: #35d404;
   }
   
-  div.tab {
+  .tab {
     overflow: hidden;
-    background-color: #191919;
-    text-align: center;
+    background-color: #000000;
+    text-align: middle;
   }
-
-  div.tab button {
-    background-color: #191919;
-    float: middle;
+  #spaceButton {
+    background-color: #000000;
+  }
+  #defaultOpen, #spaceButton {
+    background-color: #000000;
+    float: right;
     border: none;
     outline: none;
     cursor: pointer;
@@ -314,8 +321,8 @@
     font-size: 30px;
     color: #f5f5f5;
     margin: 0;
+    vertical-align: bottom;
   }
-
   #defaultOpen:hover {
     background-color: #004a7f;
   }
@@ -323,7 +330,6 @@
   #spaceButton:hover {
     background-color: #484848;
   }
-
   #defaultOpen.active {
     background-color: #004a7f;
   }
@@ -331,7 +337,6 @@
   #spaceButton.active {
     background-color: #484848;
   }
-
   .tabcontent {
     display: none;
     border-top: none;
@@ -340,12 +345,10 @@
     -webkit-animation: fadeEffect 0.5s;
     animation: fadeEffect 0.5s;
   }
-
   @-webkit-keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
   }
-
   @keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
@@ -354,17 +357,14 @@
 <script>
   function openMap(evt, mapName) {
     var i, tabcontent, tablinks;
-
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
-
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-
     document.getElementById(mapName).style.display = "block";
     evt.currentTarget.className += " active";
 }
