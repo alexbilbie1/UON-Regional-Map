@@ -27,8 +27,31 @@
 
 <div id="EarthTab" class="tabcontent">
   <div id="earth">
-    <img id="earthmap" src="Earth.png" style="width: 100%;">
+    <img id="earthmap" style="width: 100%;">
   </div>
+
+  <script>
+        document.getElementById("earthmap").src = "EarthPlain.png";
+
+    var clickedAfrica = false;
+
+    function toggleBtnClickAfrica() {
+      var imgAf = document.getElementById('earthmap');
+      if (clickedAfrica) {
+        imgAf.src = "EarthDetailled.png";
+        clickedAfrica = false;
+      } else {
+        imgAf.src = "EarthPlain.png";
+        clickedAfrica = true;
+      }
+    }
+  function clickAfrica() {
+        document.getElementById("AfricaButton").click();
+}
+clickAfrica()
+clickAfrica()
+clickAfrica()
+  </script>
   
   <div id="earthlegend" style="overflow-x:auto;">
     <table style="table-layout: fixed; width: 78%; text-align: left;  " align="center">
@@ -44,9 +67,11 @@
             <li><div class="box ash"></div>THE UNITED LANDS OF ASH</li>
             <li><div class="box cccp"></div>CCCP</li>
             <li><div class="box dominion"></div>DOMINION OF N.W. AFRICA</li>
+            <li><div class="box PGF"></div>PINO GRAND FENWICK</li>  
+            <li><div class="box prussoivoria"></div>PRUSSO IVORIA</li>  
+            <li style="margin-top: 0.2cm"><div style="width: 20px; height: 20px;" class="box AC"></div><a style="font-size: 25px; font-weight: 900; padding-top: 5px" onclick="toggleBtnClickAfrica()" id="AfricaButton">AFRICAN COMMONWEALTH</a></li>           
             <li><div class="box LoP"></div>LEGION OF PEACE</li>
-            <li><div class="box PGF"></div>PINO GRAND FENWICK</li>
-            <li><div class="box prussoivoria"></div>PRUSSO IVORIA</li>
+            <li><div class="box ginger"></div>GINGERLANDZ</li>
             <li><div class="box prussia"></div>THE PRUSSIAN RAUMREICH</li>
             <li><div class="box salani"></div>SALANI</li>
           </ul></th>
@@ -112,14 +137,14 @@
 <div id="SpaceTab" class="tabcontent">
   <div id="space">
     <img id="spaceMap" style="width: 65%;">
-    <a style="font-size: 25px; font-weight: 800; margin-right: 1.5cm;" class="SMButton" onclick="toggleBtnClick()" id="CoordinateButton">COORDINATES</a>
+    <a style="font-size: 25px; font-weight: 800; margin-right: 1.5cm;" class="SMButton" onclick="toggleBtnClickCoordinate()" id="CoordinateButton">COORDINATES</a>
   </div>
   <script>
     document.getElementById("spaceMap").src = "SpaceMap.png";
 
     var clicked = false;
 
-    function toggleBtnClick() {
+    function toggleBtnClickCoordinate() {
       var img = document.getElementById('spaceMap');
       if (clicked) {
         img.src = "coordinategrid.png";
@@ -129,12 +154,12 @@
         clicked = true;
       }
     }
-  function click() {
+  function clickCoordinate() {
         document.getElementById("CoordinateButton").click();
 }
-click()
-click()
-click()
+clickCoordinate()
+clickCoordinate()
+clickCoordinate()
 
   </script>
 
@@ -190,8 +215,9 @@ click()
       width: 0px;
       height: 0px;
       display: inline;
-      background-image: url(spaceMap.png);
-      background-image: url(Earth.png);
+      background-image: url(Space.png);
+      background-image: url(EarthPlain.png);
+      background-image: url(EarthDetailled.png);
       background-image: url(coordinategrid.png);
 
   }
@@ -257,6 +283,10 @@ click()
     color: #000000;
   }
   #CoordinateButton:hover {
+    background: #f5f5f5;
+    color: #000000;
+  }
+  #AfricaButton:hover {
     background: #f5f5f5;
     color: #000000;
   }
@@ -328,6 +358,9 @@ click()
   .prosperity {
     background: #48bdbd;
   }
+  .AC {
+    background: #58d2ff;
+  }
   .spanishrepublic {
     background: #99002e;
   }
@@ -358,8 +391,8 @@ click()
   .space-fci {
     background: #808040;
   }
-  .space-ginger {
-    background: #257acf;
+  .ginger {
+    background: #ff7f27;
   }
   .equo-stek {
     background: #d6187b;
@@ -469,7 +502,6 @@ click()
   }
   #CoordinateButton.active {
     background-color: #ffffff;
-  }
   }
   @-webkit-keyframes fadeEffect {
     from {opacity: 0;}
