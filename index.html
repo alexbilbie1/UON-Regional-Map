@@ -15,6 +15,7 @@
 
 </head>
 <body>
+  <link rel="prefetch" as="image" href="coordinategrid.png">
   <link href="https://fonts.googleapis.com/css?family=Raleway:700,800,900&amp;subset=latin-ext" rel="stylesheet">
   
 <div id="heading">
@@ -128,6 +129,13 @@
         clicked = true;
       }
     }
+  function click() {
+        document.getElementById("CoordinateButton").click();
+}
+click()
+click()
+click()
+
   </script>
 
   
@@ -176,6 +184,16 @@
     padding: 0;
     font-family: 'Raleway', sans-serif;
     background: #004a7f;
+  }
+  #preloadedImages
+  {
+      width: 0px;
+      height: 0px;
+      display: inline;
+      background-image: url(spaceMap.png);
+      background-image: url(Earth.png);
+      background-image: url(coordinategrid.png);
+
   }
   #heading {
     background: #1c1b1b;
@@ -436,8 +454,10 @@
     text-align: middle;
     -webkit-animation: fadeEffect 0.5s;
     animation: fadeEffect 0.5s;
-    padding-left: 1cm;
     vertical-align: middle;
+    position: absolute;
+    top: 6cm;
+    right: 3%;
   }
   #CoordinateButton.active {
     background-color: #ffffff;
