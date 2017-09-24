@@ -112,7 +112,7 @@
 <div id="SpaceTab" class="tabcontent">
   <div id="space">
     <img id="spaceMap" style="width: 65%;">
-    <button style="font-size: 25px; font-weight: 800; margin-right: 1.5cm;" class="SMButton" onclick="toggleBtnClick()" id="CoordinateButton">COORDINATES</button>
+    <a style="font-size: 25px; font-weight: 800; margin-right: 1.5cm;" class="SMButton" onclick="toggleBtnClick()" id="CoordinateButton">COORDINATES</a>
   </div>
   <script>
     document.getElementById("spaceMap").src = "SpaceMap.png";
@@ -252,6 +252,14 @@ click()
     margin: 0.5em 0;
   }
   
+  #CoordinateButton:active {
+    background: #f5f5f5;
+    color: #000000;
+  }
+  #CoordinateButton:hover {
+    background: #f5f5f5;
+    color: #000000;
+  }
   .box {
   float: left;
   width: 18px;
@@ -457,7 +465,7 @@ click()
     vertical-align: middle;
     position: absolute;
     top: 6cm;
-    right: 3%;
+    right: 2%;
   }
   #CoordinateButton.active {
     background-color: #ffffff;
