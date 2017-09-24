@@ -20,15 +20,13 @@
 <div id="heading">
     <a target="_blank" style="text-decoration: none" href="https://www.nationstates.net/region=the_universal_order_of_nations"><img src="https://i.imgur.com/rlBe9a8.png" style="vertical-align: middle; width: 7%;"/>
     <span style="vertical-align: middle; padding-left: 1cm; color: #f5f5f5;">THE UNIVERSAL ORDER OF NATIONS</span></a>
-  <button style="font-weight: 900" class="tablinks tab" onclick="openMap(event, 'EarthMapAll')" id="defaultOpen">EARTH</button>
-  <button style="font-weight: 900;" id="spaceButton" class="tablinks tab" onclick="openMap(event, 'spacemapall')">SPACE</button>
-
+    <button style="font-weight: 900;" id="spaceButton" class="tablinks tab" onclick="openMap(event, 'SpaceTab')">SPACE</button>
+    <button style="font-weight: 900" class="tablinks tab" onclick="openMap(event, 'EarthTab')" id="defaultOpen">EARTH</button>
 </div>
 
-
-<div id="EarthMapAll" class="tabcontent">
+<div id="EarthTab" class="tabcontent">
   <div id="earth">
-    <img id="earthmap" src="assets/Earth.png" style="width: 100%;">
+    <img id="earthmap" src="Earth.png" style="width: 100%;">
   </div>
   
   <div id="earthlegend" style="overflow-x:auto;">
@@ -110,12 +108,30 @@
   </div>
 </div>
 
-<div id="spacemapall" class="tabcontent">
+<div id="SpaceTab" class="tabcontent">
   <div id="space">
-    <img  src="assets/Space.png" style="width: 65%">
+    <img id="spaceMap" style="width: 65%;">
+    <button style="font-size: 25px; font-weight: 800; margin-right: 1.5cm;" class="SMButton" onclick="toggleBtnClick()" id="CoordinateButton">COORDINATES</button>
   </div>
+  <script>
+    document.getElementById("spaceMap").src = "SpaceMap.png";
+
+    var clicked = false;
+
+    function toggleBtnClick() {
+      var img = document.getElementById('spaceMap');
+      if (clicked) {
+        img.src = "coordinategrid.png";
+        clicked = false;
+      } else {
+        img.src = "SpaceMap.png";
+        clicked = true;
+      }
+    }
+  </script>
+
   
-  <div id="spacelegend" style="overflow-x:auto;">
+  <div id="spaceLabels" style="overflow-x:auto;">
     <table style="table-layout: fixed; width: 78%; text-align: left;  " align="center">
         <tr>
           <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
@@ -151,77 +167,7 @@
           </ul></th>
         </tr>
     </table>
-    <style>
-  .artite {
-    background: #7f7f7f;
-  }
-  .space-cccp {
-    background: #1f5f9f;
-  }
-  .space-fci {
-    background: #808040;
-  }
-  .space-ginger {
-    background: #257acf;
-  }
-  .equo-stek {
-    background: #d6187b;
-  }
-  .space-ginger {
-    background: #80ffff;
-  }
-  .space-lop {
-    background: #b97957;
-  }
-  .space-mant {
-    background: #ffffff;
-  }
-  .NEF {
-    background: #fb00ff;
-  }
-  .space-PGF {
-    background: #fd8787;
-  }
-  .space-RDA {
-    background: #00b7b7;
-  }
-  .space-sihn {
-    background: #ddc75b;
-  }
-  .stek {
-    background: #ff6533;
-  }
-  .space-mark {
-    background: #cb0033;
-  }
-  .ebony {
-    background: #c7bfe7;
-  }
-  .space-ugr {
-    background: #99d9e9;
-  }
-  .space-prussia {
-    background: #b5e51d;
-  }
-  .space-ash {
-    background: #fffb00;
-  }
-  .space-tribes {
-    background: #00cb33;
-  }
-  .space-upr {
-    background: #ff7f27;
-  }
-  .space-ws {
-    background: #00cb33;
-  }
-  .NRS {
-    background: #498d5a;
-  }
-    </style>
-
   </div>
-  
 </div>
   
 <style>
@@ -240,7 +186,7 @@
     display: inline-block;
   }
   
-  #spacemapall {
+  #SpaceTab {
     background: #484848;
   }
   
@@ -268,7 +214,7 @@
     
   }
   
-  #spacelegend {
+  #spaceLabels {
     background: #484848;
     color: #f5f5f5;
     text-align: center;
@@ -377,7 +323,72 @@
   .ugr {
     background: #35d404;
   }
-  
+  .artite {
+    background: #7f7f7f;
+  }
+  .space-cccp {
+    background: #1f5f9f;
+  }
+  .space-fci {
+    background: #808040;
+  }
+  .space-ginger {
+    background: #257acf;
+  }
+  .equo-stek {
+    background: #d6187b;
+  }
+  .space-ginger {
+    background: #80ffff;
+  }
+  .space-lop {
+    background: #b97957;
+  }
+  .space-mant {
+    background: #ffffff;
+  }
+  .NEF {
+    background: #fb00ff;
+  }
+  .space-PGF {
+    background: #fd8787;
+  }
+  .space-RDA {
+    background: #00b7b7;
+  }
+  .space-sihn {
+    background: #ddc75b;
+  }
+  .stek {
+    background: #ff6533;
+  }
+  .space-mark {
+    background: #cb0033;
+  }
+  .ebony {
+    background: #c7bfe7;
+  }
+  .space-ugr {
+    background: #99d9e9;
+  }
+  .space-prussia {
+    background: #b5e51d;
+  }
+  .space-ash {
+    background: #fffb00;
+  }
+  .space-tribes {
+    background: #00cb33;
+  }
+  .space-upr {
+    background: #ff7f27;
+  }
+  .space-ws {
+    background: #00cb33;
+  }
+  .NRS {
+    background: #498d5a;
+  }
   .tab {
     overflow: hidden;
     background-color: #000000;
@@ -386,7 +397,7 @@
   #spaceButton {
     background-color: #000000;
   }
-  #defaultOpen, #spaceButton {
+  #defaultOpen, #spaceButton, #CoordinateButton {
     background-color: #000000;
     float: right;
     border: none;
@@ -409,7 +420,6 @@
   #defaultOpen.active {
     background-color: #004a7f;
   }
-  
   #spaceButton.active {
     background-color: #484848;
   }
@@ -420,6 +430,18 @@
   .tabcontent {
     -webkit-animation: fadeEffect 0.5s;
     animation: fadeEffect 0.5s;
+  }
+  .SMButton {
+    background-color: #000000;
+    text-align: middle;
+    -webkit-animation: fadeEffect 0.5s;
+    animation: fadeEffect 0.5s;
+    padding-left: 1cm;
+    vertical-align: middle;
+  }
+  #CoordinateButton.active {
+    background-color: #ffffff;
+  }
   }
   @-webkit-keyframes fadeEffect {
     from {opacity: 0;}
