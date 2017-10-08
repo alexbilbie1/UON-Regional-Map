@@ -37,7 +37,7 @@
           <th class="ELHeadings">EUROPE</th>
         </tr>
         <tr>
-          <th><ul style="list-style:none; font-size: 19px; font-weight: 800;">
+          <th><ul class="legendcontent">
             <li><div class="box tribes"></div>21 TRIBES</li>
             <li><div class="box ash"></div>THE UNITED LANDS OF ASH</li>
             <li><div class="box cccp"></div>CCCP</li>
@@ -49,7 +49,7 @@
             <li><div class="box salani"></div>SALANI</li>
           </ul></th>
           
-          <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
+          <th style="vertical-align:top"><ul class="legendcontent">
             <li><div class="box hawaii"></div>HAWAIIAN BANANA REPUBLIC</li>
             <li><div class="box ash"></div>THE UNITED LANDS OF ASH</li>
             <li><div class="box PGF"></div>PINO GRAND FENWICK</li>
@@ -57,7 +57,7 @@
             <li><div class="box UPR"></div>UNITED PROVINCES OF REPUBLICA</li>
           </ul></th>
           
-          <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
+          <th style="vertical-align:top"><ul class="legendcontent">
             <li><div class="box ash"></div>THE UNITED LANDS OF ASH</li>
             <li><div class="box cccp"></div>CCCP</li>
             <li><div class="box saltrandra"></div>SALTRANDRA</li>
@@ -66,7 +66,7 @@
             <li><div class="box UPR"></div>UNITED PROVINCES OF REPUBLICA</li>
             <li><div class="box suburbia"></div>WEST SUBURBIA</li>
           </ul></th>
-          <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
+          <th style="vertical-align:top"><ul class="legendcontent">
             <li><div class="box tribes"></div>THE TRIBAL COMMONWEALTH</li>
             <li><div class="box cali"></div>CALICATHIA</li>
             <li><div class="box spanishconfederation"></div>THE SPANISH CONFEDERATION</li>
@@ -86,7 +86,7 @@
         </tr>
         <tr>
           <th></th>
-          <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
+          <th style="vertical-align:top"><ul class="legendcontent">
             <li><div class="box cccp"></div>CCCP</li>
             <li><div class="box fci"></div>CONFEDERATE IMPERIUM</li>
             <li><div class="box california"></div>NOVAYA CALIFORNIA</li>
@@ -94,7 +94,7 @@
             <li><div class="box sanfran"></div>SAN FRANCISCO</li>
             <li><div class="box suburbia"></div>WEST SUBURBIA</li>
           </ul></th>
-          <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
+          <th style="vertical-align:top"><ul class="legendcontent">
             <li><div class="box cccp"></div>CCCP</li>
             <li><div class="box cali"></div>CALICATHIA</li>
             <li><div class="box argo"></div>NOVA ARGONIA</li>
@@ -140,7 +140,7 @@ clickCoordinate()
   <div id="spaceLabels" style="overflow-x:auto;">
     <table style="table-layout: fixed; width: 78%; text-align: left;  " align="center">
         <tr>
-          <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
+          <th style="vertical-align:top"><ul class="legendcontent">
             <li><div class="box artite"></div>ARTITE</li>
             <li><div class="box space-cccp"></div>CCCP</li>
             <li><div class="box space-fci"></div>CONFEDERATE IMPERIUM</li>
@@ -149,7 +149,7 @@ clickCoordinate()
             <li><div class="box space-lop"></div>LEGION OF PEACE</li>
           </ul></th>
           
-          <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
+          <th style="vertical-align:top"><ul class="legendcontent"">
             <li><div class="box space-mant"></div>MANTEÑOS</li>
             <li><div class="box NEF"></div>NEW EQUISIAN FEDERATION</li>
             <li><div class="box space-PGF"></div>PINO GRAND FENWICK</li>
@@ -158,7 +158,7 @@ clickCoordinate()
             <li><div class="box stek"></div>STEKARUS</li>
           </ul></th>
           
-          <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
+          <th style="vertical-align:top"><ul class="legendcontent"">
             <li><div class="box space-mark"></div>TEUTIONIA</li>
             <li><div class="box ebony"></div>THE EBONY REPUBLIC</li>
             <li><div class="box space-ugr"></div>THE GREATER REPUBLICS</li>
@@ -166,7 +166,7 @@ clickCoordinate()
             <li><div class="box space-ash"></div>THE UNITED LANDS OF ASH</li>
             <li><div class="box space-tribes"></div>THE TRIBAL COMMONWEALTH</li>
           </ul></th>
-          <th style="vertical-align:top"><ul style="list-style:none; font-size: 19px; font-weight: 800; align: top;">
+          <th style="vertical-align:top"><ul class="legendcontent"">
             <li><div class="box space-upr"></div>UNITED PROVINCES OF REPUBLICA</li>
             <li><div class="box space-ws"></div>WEST SUBURBIA</li>
             <li><div class="box NRS"></div>NEW RHODESIAN STATE</li>
@@ -178,6 +178,9 @@ clickCoordinate()
 </div>
   
 <style>
+.legendcontent {
+  list-style:none; font-size: 19px; font-weight: 700; align: top;
+}
   body {
     margin: 0;
     padding: 0;
