@@ -26,32 +26,8 @@
 
 <div id="EarthTab" class="tabcontent">
   <div id="earth">
-    <img id="earthmap" style="width: 100%;">
+    <img id="earthmap" src="EarthMap.png" style="width: 100%;">
   </div>
-
-  <script>
-        document.getElementById("earthmap").src = "EarthPlain.png";
-
-    var clickedAfrica = false;
-
-    function toggleBtnClickAfrica() {
-      var imgAf = document.getElementById('earthmap');
-      if (clickedAfrica) {
-        imgAf.src = "EarthDetailled.png";
-        clickedAfrica = false;
-      } else {
-        imgAf.src = "EarthPlain.png";
-        clickedAfrica = true;
-      }
-    }
-  function clickAfrica() {
-        document.getElementById("AfricaButton").click();
-}
-clickAfrica()
-clickAfrica()
-clickAfrica()
-  </script>
-  
   <div id="earthlegend" style="overflow-x:auto;">
     <table style="table-layout: fixed; width: 78%; text-align: left;  " align="center">
         <tr>
