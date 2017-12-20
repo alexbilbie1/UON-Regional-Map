@@ -1,517 +1,563 @@
-<!DOCTYPE html>
-<head>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <title>Regional Maps</title>
-  <!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106544095-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments)};
-  gtag('js', new Date());
-
-  gtag('config', 'UA-106544095-1');
-</script>
-
-</head>
-<body>
-  <link rel="prefetch" as="image" href="coordinategrid.png">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:700,800,900&amp;subset=latin-ext" rel="stylesheet">
-  
-<div id="heading">
-    <a target="_blank" style="text-decoration: none" href="https://www.nationstates.net/region=the_universal_order_of_nations"><img src="https://i.imgur.com/rlBe9a8.png" style="vertical-align: middle; width: 7%;"/>
-    <span style="vertical-align: middle; padding-left: 1cm; color: #f5f5f5;">THE UNIVERSAL ORDER OF NATIONS</span></a>
-    <button style="font-weight: 900;" id="spaceButton" class="tablinks tab" onclick="openMap(event, 'SpaceTab')">SPACE</button>
-    <button style="font-weight: 900" class="tablinks tab" onclick="openMap(event, 'EarthTab')" id="defaultOpen">EARTH</button>
-</div>
-
-<div id="EarthTab" class="tabcontent">
-  <div id="earth">
-    <img id="earthmap" src="EarthMap.png" style="width: 100%;">
-  </div>
-  <div id="earthlegend" style="overflow-x:auto;">
-    <table style="table-layout: fixed; width: 78%; text-align: left;  " align="center">
-        <tr>
-          <th class="ELHeadings">AFRICA</th>
-          <th class="ELHeadings">ASIA</th>
-          <th class="ELHeadings">AUSTRALIA</th>
-          <th class="ELHeadings">EUROPE</th>
-        </tr>
-        <tr>
-          <th><ul class="legendcontent">
-            <li><div class="box tribes"></div>21 TRIBES</li>
-            <li><div class="box ash"></div>THE UNITED LANDS OF ASH</li>
-            <li><div class="box cccp"></div>CCCP</li>
-            <li><div class="box dominion"></div>DOMINION OF N.W. AFRICA</li>
-            <li><div class="box PGF"></div>PINO GRAND FENWICK</li>     
-            <li><div class="box LoP"></div>LEGION OF PEACE</li>
-            <li><div class="box ginger"></div>GINGERLANDZ</li>
-            <li><div class="box prussia"></div>THE PRUSSIAN RAUMREICH</li>
-            <li><div class="box salani"></div>SALANI</li>
-          </ul></th>
-          
-          <th style="vertical-align:top"><ul class="legendcontent">
-            <li><div class="box hawaii"></div>HAWAIIAN BANANA REPUBLIC</li>
-            <li><div class="box ash"></div>THE UNITED LANDS OF ASH</li>
-            <li><div class="box PGF"></div>PINO GRAND FENWICK</li>
-            <li><div class="box RDA"></div>REPUBLIC DEFENCE ARMY</li>
-            <li><div class="box UPR"></div>UNITED PROVINCES OF REPUBLICA</li>
-          </ul></th>
-          
-          <th style="vertical-align:top"><ul class="legendcontent">
-            <li><div class="box ash"></div>THE UNITED LANDS OF ASH</li>
-            <li><div class="box cccp"></div>CCCP</li>
-            <li><div class="box saltrandra"></div>SALTRANDRA</li>
-            <li><div class="box teut"></div>TEUTIONIA</li>
-            <li><div class="box tribes"></div>21 TRIBES</li>
-            <li><div class="box UPR"></div>UNITED PROVINCES OF REPUBLICA</li>
-            <li><div class="box suburbia"></div>WEST SUBURBIA</li>
-          </ul></th>
-          <th style="vertical-align:top"><ul class="legendcontent">
-            <li><div class="box tribes"></div>THE TRIBAL COMMONWEALTH</li>
-            <li><div class="box cali"></div>CALICATHIA</li>
-            <li><div class="box spanishconfederation"></div>THE SPANISH CONFEDERATION</li>
-            <li><div class="box scotland"></div>THE FREE SCOTTISH UNION</li>
-            <li><div class="box frenchkingdom"></div>THE NEW FRENCH KINGDOM</li>
-            <li><div class="box PGF"></div>PINO GRAND FENWICK</li>
-            <li><div class="box prosperity"></div>PROSPERITY</li>
-            <li><div class="box spanishrepublic"></div>THE SPANISH REPUBLIC</li>
-            <li><div class="box teut"></div>TEUTIONIA</li>
-          </ul></th>
-        </tr>
-        <tr>
-          <th class="ELHeadings"></th>
-          <th class="ELHeadings">NORTH AMERICA</th>
-          <th class="ELHeadings">SOUTH AMERICA</th>
-          <th class="ELHeadings"></th>
-        </tr>
-        <tr>
-          <th></th>
-          <th style="vertical-align:top"><ul class="legendcontent">
-            <li><div class="box cccp"></div>CCCP</li>
-            <li><div class="box fci"></div>CONFEDERATE IMPERIUM</li>
-            <li><div class="box california"></div>NOVAYA CALIFORNIA</li>
-            <li><div class="box RDA"></div>REPUBLIC DEFENCE ARMY</li>
-            <li><div class="box sanfran"></div>SAN FRANCISCO</li>
-            <li><div class="box suburbia"></div>WEST SUBURBIA</li>
-          </ul></th>
-          <th style="vertical-align:top"><ul class="legendcontent">
-            <li><div class="box cccp"></div>CCCP</li>
-            <li><div class="box cali"></div>CALICATHIA</li>
-            <li><div class="box argo"></div>NOVA ARGONIA</li>
-            <li><div class="box mant"></div>MANTEÑOS</li>
-            <li><div class="box ugr"></div>THE GREATER REPUBLICS</li>
-            <li><div class="box suburbia"></div>WEST SUBURBIA</li>
-          </ul></th>
-        </tr>
-    </table>
-    <div id="spaceDate" class="legendcontent">
-    	<p>Updated 3rd December 2017</p>
-    </div>
-  </div>
-</div>
-
-<div id="SpaceTab" class="tabcontent">
-  <div id="space">
-    <img id="spaceMap" style="width: 65%;">
-    <a style="font-size: 25px; font-weight: 800; margin-right: 1.5cm;" class="SMButton" onclick="toggleBtnClickCoordinate()" id="CoordinateButton">COORDINATES</a>
-  </div>
+  <!DOCTYPE html>
+  <head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Regional Maps</title>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106544095-1"></script>
   <script>
-    document.getElementById("spaceMap").src = "SpaceMap.png";
-
-    var clicked = false;
-
-    function toggleBtnClickCoordinate() {
-      var img = document.getElementById('spaceMap');
-      if (clicked) {
-        img.src = "coordinategrid.png";
-        clicked = false;
-      } else {
-        img.src = "SpaceMap.png";
-        clicked = true;
-      }
-    }
-  function clickCoordinate() {
-        document.getElementById("CoordinateButton").click();
-}
-clickCoordinate()
-clickCoordinate()
-clickCoordinate()
-
-  </script>
-
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)};
+    gtag('js', new Date());
   
-  <div id="spaceLabels" style="overflow-x:auto;">
-    <table style="table-layout: fixed; width: 78%; text-align: left;  " align="center">
-        <tr>
-          <th style="vertical-align:top"><ul class="legendcontent">
-            <li><div class="box artite"></div>ARTITE</li>
-            <li><div class="box space-cccp"></div>CCCP</li>
-            <li><div class="box space-fci"></div>CONFEDERATE IMPERIUM</li>
-            <li><div class="box equo-stek"></div>EQUISIAN-STEK ZONE</li>
-            <li><div class="box space-ginger"></div>GINGERLANDZ</li>
-            <li><div class="box space-lop"></div>LEGION OF PEACE</li>
-          </ul></th>
-          
-          <th style="vertical-align:top"><ul class="legendcontent"">
-            <li><div class="box space-mant"></div>MANTEÑOS</li>
-            <li><div class="box NEF"></div>NEW EQUISIAN FEDERATION</li>
-            <li><div class="box space-PGF"></div>PINO GRAND FENWICK</li>
-            <li><div class="box space-RDA"></div>REPUBLIC DEFENCE ARMY</li>
-            <li><div class="box space-sihn"></div>SIHN</li>
-            <li><div class="box stek"></div>STEKARUS</li>
-          </ul></th>
-          
-          <th style="vertical-align:top"><ul class="legendcontent"">
-            <li><div class="box space-mark"></div>TEUTIONIA</li>
-            <li><div class="box ebony"></div>THE EBONY REPUBLIC</li>
-            <li><div class="box space-ugr"></div>THE GREATER REPUBLICS</li>
-            <li><div class="box space-prussia"></div>THE PRUSSIAN RAUMREICH</li>
-            <li><div class="box space-ash"></div>THE UNITED LANDS OF ASH</li>
-            <li><div class="box space-tribes"></div>THE TRIBAL COMMONWEALTH</li>
-          </ul></th>
-          <th style="vertical-align:top"><ul class="legendcontent"">
-            <li><div class="box space-upr"></div>UNITED PROVINCES OF REPUBLICA</li>
-            <li><div class="box space-ws"></div>WEST SUBURBIA</li>
-            <li><div class="box NRS"></div>NEW RHODESIAN STATE</li>
-            <li><div class="box ark"></div>ARKAEN FEDERATION</li>
-          </ul></th>
-        </tr>
-    </table>
-    <div id="spaceDate" class="legendcontent">
-    	<p>Updated 3rd December 2017</p>
+    gtag('config', 'UA-106544095-1');
+  </script>
+  
+  </head>
+  <body>
+    <link rel="prefetch" as="image" href="coordinategrid.png">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700,800,900&amp;subset=latin-ext" rel="stylesheet">
+    
+  <div id="heading">
+      <a target="_blank" style="text-decoration: none" href="https://www.nationstates.net/region=the_universal_order_of_nations"><img src="https://i.imgur.com/rlBe9a8.png" style="vertical-align: middle; width: 7%;"/>
+      <span style="vertical-align: middle; padding-left: 1cm; color: #f5f5f5;">THE UNIVERSAL ORDER OF NATIONS</span></a>
+      <button style="font-weight: 900;" id="spaceButton" class="tablinks tab" onclick="openMap(event, 'SpaceTab');document.body.style.backgroundColor = '#484848';">SPACE</button>
+      <button style="font-weight: 900" class="tablinks tab" onclick="openMap(event, 'EarthTab');document.body.style.backgroundColor = '#004a7f';" id="defaultOpen">EARTH</button>
+      <button style="font-weight: 900" class="tablinks tab" onclick="openMap(event, 'InfoTab');document.body.style.backgroundColor = '#f5f5f5';" id="info">INFO</button>
+  </div>
+  
+  <div id="EarthTab" class="tabcontent">
+    <div id="earth">
+      <img id="earthmap" src="EarthMap.png" style="width: 100%;">
+    </div>
+    <div id="earthlegend" style="overflow-x:auto;">
+      <table style="table-layout: fixed; width: 78%; text-align: left;  " align="center">
+          <tr>
+            <th class="ELHeadings">AFRICA</th>
+            <th class="ELHeadings">ASIA</th>
+            <th class="ELHeadings">AUSTRALIA</th>
+            <th class="ELHeadings">EUROPE</th>
+          </tr>
+          <tr>
+            <th><ul class="legendcontent">
+              <li><div class="box tribes"></div>21 TRIBES</li>
+              <li><div class="box ash"></div>THE UNITED LANDS OF ASH</li>
+              <li><div class="box cccp"></div>CCCP</li>
+              <li><div class="box dominion"></div>DOMINION OF N.W. AFRICA</li>
+              <li><div class="box PGF"></div>PINO GRAND FENWICK</li>
+              <li><div class="box LoP"></div>LEGION OF PEACE</li>
+              <li><div class="box ginger"></div>GINGERLANDZ</li>
+              <li><div class="box prussia"></div>THE PRUSSIAN RAUMREICH</li>
+              <li><div class="box salani"></div>SALANI</li>
+            </ul></th>
+            
+            <th style="vertical-align:top"><ul class="legendcontent">
+              <li><div class="box hawaii"></div>HAWAIIAN BANANA REPUBLIC</li>
+              <li><div class="box ash"></div>THE UNITED LANDS OF ASH</li>
+              <li><div class="box PGF"></div>PINO GRAND FENWICK</li>
+              <li><div class="box RDA"></div>REPUBLIC DEFENCE ARMY</li>
+              <li><div class="box UPR"></div>UNITED PROVINCES OF REPUBLICA</li>
+            </ul></th>
+            
+            <th style="vertical-align:top"><ul class="legendcontent">
+              <li><div class="box ash"></div>THE UNITED LANDS OF ASH</li>
+              <li><div class="box cccp"></div>CCCP</li>
+              <li><div class="box saltrandra"></div>SALTRANDRA</li>
+              <li><div class="box teut"></div>TEUTIONIA</li>
+              <li><div class="box tribes"></div>21 TRIBES</li>
+              <li><div class="box UPR"></div>UNITED PROVINCES OF REPUBLICA</li>
+              <li><div class="box suburbia"></div>WEST SUBURBIA</li>
+            </ul></th>
+            <th style="vertical-align:top"><ul class="legendcontent">
+              <li><div class="box tribes"></div>THE TRIBAL COMMONWEALTH</li>
+              <li><div class="box cali"></div>CALICATHIA</li>
+              <li><div class="box spanishconfederation"></div>THE SPANISH CONFEDERATION</li>
+              <li><div class="box scotland"></div>THE FREE SCOTTISH UNION</li>
+              <li><div class="box frenchkingdom"></div>THE NEW FRENCH KINGDOM</li>
+              <li><div class="box PGF"></div>PINO GRAND FENWICK</li>
+              <li><div class="box prosperity"></div>PROSPERITY</li>
+              <li><div class="box spanishrepublic"></div>THE SPANISH REPUBLIC</li>
+              <li><div class="box teut"></div>TEUTIONIA</li>
+            </ul></th>
+          </tr>
+          <tr>
+            <th class="ELHeadings"></th>
+            <th class="ELHeadings">NORTH AMERICA</th>
+            <th class="ELHeadings">SOUTH AMERICA</th>
+            <th class="ELHeadings"></th>
+          </tr>
+          <tr>
+            <th></th>
+            <th style="vertical-align:top"><ul class="legendcontent">
+              <li><div class="box cccp"></div>CCCP</li>
+              <li><div class="box fci"></div>CONFEDERATE IMPERIUM</li>
+              <li><div class="box california"></div>NOVAYA CALIFORNIA</li>
+              <li><div class="box RDA"></div>REPUBLIC DEFENCE ARMY</li>
+              <li><div class="box sanfran"></div>SAN FRANCISCO</li>
+              <li><div class="box suburbia"></div>WEST SUBURBIA</li>
+              <li><div class="box NRS"></div>NEW DESERET REALMS</li>
+            </ul></th>
+            <th style="vertical-align:top"><ul class="legendcontent">
+              <li><div class="box cccp"></div>CCCP</li>
+              <li><div class="box cali"></div>CALICATHIA</li>
+              <li><div class="box argo"></div>NOVA ARGONIA</li>
+              <li><div class="box mant"></div>MANTEÑOS</li>
+              <li><div class="box ugr"></div>THE GREATER REPUBLICS</li>
+              <li><div class="box suburbia"></div>WEST SUBURBIA</li>
+            </ul></th>
+          </tr>
+      </table>
+      <div id="spaceDate" class="legendcontent">
+      	<p>Updated 3rd December 2017</p>
+      </div>
     </div>
   </div>
-</div>
   
-<style>
-.legendcontent {
-  list-style:none; font-size: 19px; font-weight: 700; align: top;
-}
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Raleway', sans-serif;
-    background: #004a7f;
-  }
-  #preloadedImages
-  {
-      width: 0px;
-      height: 0px;
-      display: inline;
-      background-image: url(Space.png);
-      background-image: url(EarthPlain.png);
-      background-image: url(EarthDetailled.png);
-      background-image: url(coordinategrid.png);
-
-  }
-  #heading {
-    background: #1c1b1b;
-    padding: 3%;
-    font-size: 45px;
-    font-weight: 900;
-    text-align: left;
-    display: inline-block;
-  }
+  <div id="SpaceTab" class="tabcontent">
+    <div id="space">
+      <img id="spaceMap" style="width: 65%;">
+    </div>
+    <script>
+      document.getElementById("spaceMap").src = "SpaceMap.png";
   
-  #SpaceTab {
-    background: #484848;
-  }
+      var clicked = false;
   
-  #space {
-    background: #484848;
-    text-align: center;
-    padding-top: 1cm;
-    image-rendering: crisp-edges;
+      function toggleBtnClickCoordinate() {
+        var img = document.getElementById('spaceMap');
+        if (clicked) {
+          img.src = "coordinategrid.png";
+          clicked = false;
+        } else {
+          img.src = "SpaceMap.png";
+          clicked = true;
+        }
+      }
+    function clickCoordinate() {
+          document.getElementById("CoordinateButton").click();
+  }
+  clickCoordinate()
+  clickCoordinate()
+  clickCoordinate()
+  
+    </script>
+  
+    <div id="coordinatebuttonDiv" style="text-align: center; margin-top: 3%;">
+      <a style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickCoordinate()" id="CoordinateButton">COORDINATES</a>
+    </div>
+    <div id="spaceLabels" style="overflow-x:auto;">
+      <table style="table-layout: fixed; width: 78%; text-align: left;  " align="center">
+          <tr>
+            <th style="vertical-align:top"><ul class="legendcontent">
+              <li><div class="box artite"></div>ARTITE</li>
+              <li><div class="box space-cccp"></div>CCCP</li>
+              <li><div class="box space-fci"></div>CONFEDERATE IMPERIUM</li>
+              <li><div class="box equo-stek"></div>EQUISIAN-STEK ZONE</li>
+              <li><div class="box space-ginger"></div>GINGERLANDZ</li>
+              <li><div class="box space-lop"></div>LEGION OF PEACE</li>
+            </ul></th>
+            
+            <th style="vertical-align:top"><ul class="legendcontent">
+              <li><div class="box space-mant"></div>MANTEÑOS</li>
+              <li><div class="box NEF"></div>NEW EQUISIAN FEDERATION</li>
+              <li><div class="box space-PGF"></div>PINO GRAND FENWICK</li>
+              <li><div class="box space-RDA"></div>REPUBLIC DEFENCE ARMY</li>
+              <li><div class="box space-sihn"></div>SIHN</li>
+              <li><div class="box stek"></div>STEKARUS</li>
+            </ul></th>
+            
+            <th style="vertical-align:top"><ul class="legendcontent">
+              <li><div class="box space-mark"></div>TEUTIONIA</li>
+              <li><div class="box ebony"></div>THE EBONY REPUBLIC</li>
+              <li><div class="box space-ugr"></div>THE GREATER REPUBLICS</li>
+              <li><div class="box space-prussia"></div>THE PRUSSIAN RAUMREICH</li>
+              <li><div class="box space-ash"></div>THE UNITED LANDS OF ASH</li>
+              <li><div class="box space-tribes"></div>THE TRIBAL COMMONWEALTH</li>
+            </ul></th>
+            <th style="vertical-align:top"><ul class="legendcontent">
+              <li><div class="box space-upr"></div>UNITED PROVINCES OF REPUBLICA</li>
+              <li><div class="box space-ws"></div>WEST SUBURBIA</li>
+              <li><div class="box orks"></div>ORKS OF URAD</li>
+              <li><div class="box coriban"></div>CORIBAN</li>
+            </ul></th>
+          </tr>
+      </table>
+      <div id="spaceDate" class="legendcontent">
+      	<p>Updated 3rd December 2017</p>
+      </div>
+    </div>
+  </div>
+  
+  <div id="InfoTab" class="tabcontent">
+    <div id="claim">
+      <h1>WIP, DON'T MIND ME</h1>
+    </div>
+  </div>
     
-  }
-  
-  #earth {
-    text-align: center;
-    background: #004a7f;
-    
-  }
-  #earthmap {
-    image-rendering: crisp-edges;
-  }
-  #earthlegend {
-    background: #004a7f;
-    color: #f5f5f5;
-    text-align: center;
-    padding-top: 1cm;
-    
-  }
-  
-  #spaceLabels {
-    background: #484848;
-    color: #f5f5f5;
-    text-align: center;
-    padding-top: 1cm;
-    
-  }
-  .ELHeadings {
-    font-weight: 900;
-    font-size: 25px;
-    text-align: left;
-  }
-  ul {
-    margin: 1em 0;
-    padding: 0 0 0 10px;
-  }
-  li {
-    margin: 0.5em 0;
-  }
-  
-  #CoordinateButton:active {
-    background: #f5f5f5;
+  <style>
+  #claim {
     color: #000000;
-  }
-  #CoordinateButton:hover {
-    background: #f5f5f5;
-    color: #000000;
-  }
-  #AfricaButton:hover {
-    background: #f5f5f5;
-    color: #000000;
-  }
-  .box {
-  float: left;
-  width: 18px;
-  height: 18px;
-  margin: 0px;
-  margin-right: 15px;
-  vertical-align: text-bottom;
-  }
-  .tribes {
-    background: #009942;
-  }
-  .ash {
-    background: #92b848;
-  }
-  .cccp {
-    background: #c7bee6;
-  }
-  .dominion {
-    background: #f27478;
-  }
-  .LoP {
-    background: #9afc77;
-  }
-  .PGF {
-    background: #ffc70f;
-  }
-  .prussoivoria {
-    background: #257acf;
-  }
-  .prussia {
-    background: #408080;
-  }
-  .salani {
-    background: #ff4f4f;
-  }
-  .hawaii {
-    background: #2ed9d9;
-  }
-  .RDA {
-    background: #b87a58;
-  }
-  .UPR {
-    background: #d42222;
-  }
-  .saltrandra {
-    background: #7a3d3f;
-  }
-  .teut {
-    background: #870446;
-  }
-  .suburbia {
-    background: #ffee00;
-  }
-  .cali {
-    background: #4e6ef2;
-  }
-  .spanishconfederation {
-    background: #9c593d;
-  }
-  .scotland {
-    background: #9c593d;
-  }
-  .frenchkingdom {
-    background: #2424b2;
-  }
-  .prosperity {
-    background: #48bdbd;
-  }
-  .AC {
-    background: #58d2ff;
-  }
-  .spanishrepublic {
-    background: #99002e;
-  }
-  .fci {
-    background: #ff7b00;
-  }
-  .california {
-    background: #6f92bd;
-  }
-  .sanfran {
-    background: #6f227d;
-  }
-  .argo {
-    background: #a249a3;
-  }
-  .mant {
-    background: #73b6fa;
-  }
-  .ugr {
-    background: #35d404;
-  }
-  .artite {
-    background: #7f7f7f;
-  }
-  .space-cccp {
-    background: #1f5f9f;
-  }
-  .space-fci {
-    background: #808040;
-  }
-  .ginger {
-    background: #ff7f27;
-  }
-  .equo-stek {
-    background: #d6187b;
-  }
-  .space-ginger {
-    background: #80ffff;
-  }
-  .space-lop {
-    background: #b97957;
-  }
-  .space-mant {
-    background: #ffffff;
-  }
-  .NEF {
-    background: #fb00ff;
-  }
-  .space-PGF {
-    background: #fd8787;
-  }
-  .space-RDA {
-    background: #00b7b7;
-  }
-  .space-sihn {
-    background: #ddc75b;
-  }
-  .stek {
-    background: #ff6533;
-  }
-  .space-mark {
-    background: #cb0033;
-  }
-  .ebony {
-    background: #c7bfe7;
-  }
-  .space-ugr {
-    background: #99d9e9;
-  }
-  .space-prussia {
-    background: #b5e51d;
-  }
-  .space-ash {
-    background: #fffb00;
-  }
-  .space-tribes {
-    background: #00cb33;
-  }
-  .space-upr {
-    background: #ff7f27;
-  }
-  .space-ws {
-    background: #00cb33;
-  }
-  .NRS {
-    background: #498d5a;
-  }
-  .ark {
-    background: #f88aff;
-  }
-  .tab {
-    overflow: hidden;
-    background-color: #000000;
-    text-align: middle;
-  }
-  #spaceButton {
-    background-color: #000000;
-  }
-  #defaultOpen, #spaceButton, #CoordinateButton {
-    background-color: #000000;
-    float: right;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 20px 22px;
-    transition: 0.1s;
-    font-size: 30px;
-    color: #f5f5f5;
-    margin: 0;
-    vertical-align: bottom;
-  }
-  #defaultOpen:hover {
-    background-color: #004a7f;
-  }
-  
-  #spaceButton:hover {
-    background-color: #484848;
-  }
-  #defaultOpen.active {
-    background-color: #004a7f;
-  }
-  #spaceButton.active {
-    background-color: #484848;
-  }
-  .tabcontent {
-    display: none;
-    border-top: none;
-  }
-  .tabcontent {
-    -webkit-animation: fadeEffect 0.5s;
-    animation: fadeEffect 0.5s;
-  }
-  .SMButton {
-    background-color: #000000;
-    text-align: middle;
-    -webkit-animation: fadeEffect 0.5s;
-    animation: fadeEffect 0.5s;
-    vertical-align: middle;
-    position: absolute;
-    top: 6cm;
-    right: 2%;
-  }
-  #CoordinateButton.active {
-    background-color: #ffffff;
-  }
-  @-webkit-keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-  @keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-  </style>
-<script>
-  function openMap(evt, mapName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+    text-align: center;
+  }
+  .legendcontent {
+    list-style:none; font-size: 19px; font-weight: 700; align: top;
+  }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Raleway', sans-serif;
     }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    #preloadedImages
+    {
+        width: 0px;
+        height: 0px;
+        display: inline;
+        background-image: url(Space.png);
+        background-image: url(EarthPlain.png);
+        background-image: url(EarthDetailled.png);
+        background-image: url(coordinategrid.png);
+  
     }
-    document.getElementById(mapName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-    document.getElementById("defaultOpen").click();
-</script>
-</body>
+    #heading {
+      background: #1c1b1b;
+      padding: 3%;
+      font-size: 45px;
+      font-weight: 900;
+      text-align: left;
+      display: inline-block;
+    }
+    
+    #SpaceTab {
+      background: #484848;
+    }
+    
+    #space {
+      background: #484848;
+      text-align: center;
+      padding-top: 1cm;
+      image-rendering: crisp-edges;
+      
+    }
+    
+    #earth {
+      text-align: center;
+      background: #004a7f;
+      
+    }
+    #earthmap {
+      image-rendering: crisp-edges;
+    }
+    #earthlegend {
+      background: #004a7f;
+      color: #f5f5f5;
+      text-align: center;
+      padding-top: 1cm;
+      
+    }
+    
+    #spaceLabels {
+      background: #484848;
+      color: #f5f5f5;
+      text-align: center;
+      padding-top: 1cm;
+      
+    }
+    .ELHeadings {
+      font-weight: 900;
+      font-size: 25px;
+      text-align: left;
+    }
+    ul {
+      margin: 1em 0;
+      padding: 0 0 0 10px;
+    }
+    li {
+      margin: 0.5em 0;
+    }
+    
+    #CoordinateButton:active {
+      background: #f5f5f5;
+      color: #000000;
+    }
+    #CoordinateButton:hover {
+      background: #f5f5f5;
+      color: #000000;
+    }
+    #AfricaButton:hover {
+      background: #f5f5f5;
+      color: #000000;
+    }
+    .box {
+    float: left;
+    width: 18px;
+    height: 18px;
+    margin: 0px;
+    margin-right: 15px;
+    vertical-align: text-bottom;
+    }
+    .tribes {
+      background: #009942;
+    }
+    .ash {
+      background: #92b848;
+    }
+    .cccp {
+      background: #c7bee6;
+    }
+    .dominion {
+      background: #f27478;
+    }
+    .LoP {
+      background: #9afc77;
+    }
+    .PGF {
+      background: #ffc70f;
+    }
+    .prussoivoria {
+      background: #257acf;
+    }
+    .prussia {
+      background: #408080;
+    }
+    .salani {
+      background: #ff4f4f;
+    }
+    .hawaii {
+      background: #2ed9d9;
+    }
+    .RDA {
+      background: #b87a58;
+    }
+    .UPR {
+      background: #d42222;
+    }
+    .saltrandra {
+      background: #7a3d3f;
+    }
+    .teut {
+      background: #870446;
+    }
+    .suburbia {
+      background: #ffee00;
+    }
+    .cali {
+      background: #4e6ef2;
+    }
+    .spanishconfederation {
+      background: #9c593d;
+    }
+    .scotland {
+      background: #9c593d;
+    }
+    .frenchkingdom {
+      background: #2424b2;
+    }
+    .prosperity {
+      background: #48bdbd;
+    }
+    .AC {
+      background: #58d2ff;
+    }
+    .spanishrepublic {
+      background: #99002e;
+    }
+    .fci {
+      background: #ff7b00;
+    }
+    .california {
+      background: #6f92bd;
+    }
+    .sanfran {
+      background: #6f227d;
+    }
+    .argo {
+      background: #a249a3;
+    }
+    .mant {
+      background: #73b6fa;
+    }
+    .ugr {
+      background: #35d404;
+    }
+    .artite {
+      background: #7f7f7f;
+    }
+    .space-cccp {
+      background: #1f5f9f;
+    }
+    .space-fci {
+      background: #808040;
+    }
+    .ginger {
+      background: #ff7f27;
+    }
+    .equo-stek {
+      background: #d6187b;
+    }
+    .space-ginger {
+      background: #80ffff;
+    }
+    .space-lop {
+      background: #b97957;
+    }
+    .space-mant {
+      background: #ffffff;
+    }
+    .NEF {
+      background: #fb00ff;
+    }
+    .space-PGF {
+      background: #fd8787;
+    }
+    .space-RDA {
+      background: #00b7b7;
+    }
+    .space-sihn {
+      background: #ddc75b;
+    }
+    .stek {
+      background: #ff6533;
+    }
+    .space-mark {
+      background: #cb0033;
+    }
+    .ebony {
+      background: #c7bfe7;
+    }
+    .space-ugr {
+      background: #99d9e9;
+    }
+    .space-prussia {
+      background: #b5e51d;
+    }
+    .space-ash {
+      background: #fffb00;
+    }
+    .space-tribes {
+      background: #00cb33;
+    }
+    .space-upr {
+      background: #ff7f27;
+    }
+    .space-ws {
+      background: #00cb33;
+    }
+    .NRS {
+      background: #498d5a;
+    }
+    .orks {
+      background: #f88aff;
+    }
+    .coriban {
+      background: #a3a35b
+    }
+    .tab {
+      overflow: hidden;
+      background-color: #000000;
+      text-align: middle;
+    }
+    #spaceButton {
+      background-color: #000000;
+    }
+    #defaultOpen, #spaceButton, #info {
+      background-color: #000000;
+      float: right;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 20px 22px;
+      transition: 0.1s;
+      font-size: 30px;
+      color: #f5f5f5;
+      margin: 0;
+      vertical-align: bottom;
+    }
+    #CoordinateButton {
+      float: center;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 20px 22px;
+      transition: 0.1s;
+      font-size: 30px;
+      color: #f5f5f5;
+      vertical-align: bottom;
+      
+      background-color: #000000;
+      text-align: middle;
+      -webkit-animation: fadeEffect 0.5s;
+      animation: fadeEffect 0.5s;
+    }
+    #defaultOpen:hover {
+      background-color: #004a7f;
+    }
+    
+    #spaceButton:hover {
+      background-color: #484848;
+    }
+    #defaultOpen.active {
+      background-color: #004a7f;
+    }
+    #spaceButton.active {
+      background-color: #484848;
+    }
+    #info.active {
+      background-color: #f5f5f5;
+      color: #000000;
+    }
+    #info:hover {
+      background-color: #f5f5f5;
+      color: #000000;
+    }
+    #info {
+      background: #000000;
+    }
+    .tabcontent {
+      display: none;
+      border-top: none;
+    }
+    .tabcontent {
+      -webkit-animation: fadeEffect 0.5s;
+      animation: fadeEffect 0.5s;
+    }
+    .SMButton {
+      background-color: #000000;
+      text-align: middle;
+      -webkit-animation: fadeEffect 0.5s;
+      animation: fadeEffect 0.5s;
+      vertical-align: middle;
+      position: absolute;
+      top: 6cm;
+      right: 2%;
+    }
+    #CoordinateButton.active {
+      background-color: #ffffff;
+    }
+    @-webkit-keyframes fadeEffect {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes fadeEffect {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    </style>
+  <script>
+    function openMap(evt, mapName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(mapName).style.display = "block";
+      evt.currentTarget.className += " active";
+  }
+      document.getElementById("defaultOpen").click();
+      
+    function chBackcolor(color) {
+     document.body.style.background = color;
+  }
+  </script>
+  </body>
