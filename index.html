@@ -103,6 +103,10 @@
       document.getElementById("spaceMap").src = "SpaceMap.png";
   
       var clicked = false;
+      
+      function clickCoordinate() {
+            document.getElementById("CoordinateButton").click();
+    }
   
       function toggleBtnClickCoordinate() {
         var img = document.getElementById('spaceMap');
@@ -114,12 +118,7 @@
           clicked = true;
         }
       }
-    function clickCoordinate() {
-          document.getElementById("CoordinateButton").click();
-  }
-  clickCoordinate()
-  clickCoordinate()
-  clickCoordinate()
+      toggleBtnClickCoordinate()
   
     </script>
   
@@ -159,7 +158,6 @@
               <li><div class="box space-upr"></div>UNITED PROVINCES OF REPUBLICA</li>
               <li><div class="box space-ws"></div>WEST SUBURBIA</li>
               <li><div class="box orks"></div>ORKS OF URAD</li>
-              <li><div class="box coriban"></div>CORIBAN</li>
               <li><div class="box AV"></div>AVANT VANGUARD</li>
             </ul></th>
           </tr>
