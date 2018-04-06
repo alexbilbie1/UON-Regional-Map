@@ -1,3 +1,3 @@
 # Regional Map for the Universal Order of Nations
 
-http://uonregion.com/
+http://map.uonregion.com/
