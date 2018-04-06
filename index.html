@@ -30,35 +30,38 @@
       <img id="earthmap" src="EarthMap.png" style="width: 100%;">
     </div>
     <div id="earthlegend" style="overflow-x:auto;">
-      <table style="table-layout: fixed; width: 78%; text-align: left;  " align="center">
-          <tr>
-            <th class="ELHeadings">AFRICA</th>
-            <th class="ELHeadings">ASIA</th>
-            <th class="ELHeadings">AUSTRALIA</th>
-            <th class="ELHeadings">EUROPE</th>
-          </tr>
-          <tr>
-            <th style="vertical-align:top"><ul class="legendcontent">
+
+    <div id="table">
+   <div class="newHeadings">
+      <h2 class="headings">AFRICA</h2>
+      <ul class="list">
               <li><div class="box PGF"></div>PINO GRAND FENWICK</li>
               <li><div class="box ginger"></div>GINGERLANDZ</li>
               <li><div class="box artite_earth"></div>ARTITE</li>
               <li><div class="box soviet"></div>RTSSR</li>
               <li><div class="box stek"></div>STEKARUS</li>
-            </ul></th>
-            
-            <th style="vertical-align:top"><ul class="legendcontent">
+      </ul>
+   </div>
+   <div class="newHeadings">
+      <h2 class="headings">ASIA</h2>
+      <ul class="list">
               <li><div class="box ash"></div>THE UNITED LANDS OF ASH</li>
               <li><div class="box PGF"></div>PINO GRAND FENWICK</li>
               <li><div class="box RDA"></div>REPUBLIC DEFENCE ARMY</li>
               <li><div class="box UPR"></div>UNITED PROVINCES OF REPUBLICA</li>
               <li><div class="box dokistan"></div>GREATER DOKISTAN</li>
-            </ul></th>
-            
-            <th style="vertical-align:top"><ul class="legendcontent">
+      </ul>
+   </div>
+   <div class="newHeadings">
+      <h2 class="headings">OCEANIA</h2>
+      <ul class="list">
               <li><div class="box suburbia"></div>WEST SUBURBIA</li>
               <li><div class="box morakaya"></div>MORAKAYA</li>
-            </ul></th>
-            <th style="vertical-align:top"><ul class="legendcontent">
+      </ul>
+   </div>
+   <div class="newHeadings">
+      <h2 class="headings">EUROPE</h2>
+      <ul class="list">
               <li><div class="box tribes"></div>THE TRIBAL COMMONWEALTH</li>
               <li><div class="box cali"></div>CALICATHIA</li>
               <li><div class="box PGF"></div>PINO GRAND FENWICK</li>
@@ -67,17 +70,11 @@
               <li><div class="box soviet"></div>RTSSR</li>
               <li><div class="box sihn"></div>SGAOIL</li>
               <li><div class="box iaf"></div>IAF</li>
-            </ul></th>
-          </tr>
-          <tr>
-            <th class="ELHeadings"></th>
-            <th class="ELHeadings">NORTH AMERICA</th>
-            <th class="ELHeadings">SOUTH AMERICA</th>
-            <th class="ELHeadings"></th>
-          </tr>
-          <tr>
-            <th></th>
-            <th style="vertical-align:top"><ul class="legendcontent">
+      </ul>
+   </div>
+   <div class="newHeadings">
+      <h2 class="headings">N. AMERICA</h2>
+      <ul class="list">
               <li><div class="box cccp"></div>CCCP</li>
               <li><div class="box fci"></div>CONFEDERATE IMPERIUM</li>
               <li><div class="box RDA"></div>REPUBLIC DEFENCE ARMY</li>
@@ -85,22 +82,69 @@
               <li><div class="box suburbia"></div>WEST SUBURBIA</li>
               <li><div class="box NRS"></div>NEW DESERET REALMS</li>
               <li><div class="box wyoming"></div>WYOMING PEOPLE'S FRONT</li>
-            </ul></th>
-            <th style="vertical-align:top"><ul class="legendcontent">
+      </ul>
+   </div>
+   <div class="newHeadings">
+      <h2 class="headings">S. AMERICA</h2>
+      <ul class="list">
               <li><div class="box cccp"></div>CCCP</li>
               <li><div class="box cali"></div>CALICATHIA</li>
-              <li><div class="box argo"></div>MANTEÑO ARGONIA</li>
-              <li><div class="box mant"></div>MANTEÑOS</li>
+              <li><div class="box argo"></div>MANTENO ARGONIA</li>
+              <li><div class="box mant"></div>MANTENOS</li>
               <li><div class="box ugr"></div>THE GREATER REPUBLICS</li>
-
-            </ul></th>
-          </tr>
-      </table>
-      <div id="spaceDate" class="legendcontent">
-      	<p>Updated 22nd March 2018</p>
+      </ul>
+   </div>
+</div>
+      <div id="spaceDate" class="legendcontent" style="font-weight:">
+        <p>Updated 22nd March 2018</p>
       </div>
     </div>
   </div>
+<style>
+.list {
+  text-align: left;
+  padding-left: 25%;
+  list-style:none;
+  font-weight:600;
+  margin: 2%;
+}
+.headings {
+  text-align: left;
+  padding-left:26%;
+  font-weight: 900;
+}
+
+#table {
+    color:#ffffff;
+    display:flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    width:100%;
+    text-align: center;
+}
+
+#table > div {
+    width:25%;
+}
+
+@media(max-width:1024px){
+    #table > div {
+        width:33%;
+    }
+}
+
+@media(max-width:768px){
+    #table > div {
+        width:50%;
+    }
+}
+
+@media(max-width:500px){
+    #table > div {
+        width:100%;
+    }
+}
+</style>
   
   <div id="SpaceTab" class="tabcontent">
     <div id="space">
