@@ -81,7 +81,7 @@ background-color:#000000;
     </div>
     <div id="earthlegend" style="overflow-x:auto;">
 
-    <div id="table">
+  <div id="table">
    <div class="newHeadings">
       <h2 class="headings">AFRICA</h2>
       <ul class="list">
@@ -150,6 +150,7 @@ background-color:#000000;
       </div>
     </div>
   </div>
+
 <style>
 .list {
   text-align: left;
@@ -266,13 +267,16 @@ background-color:#000000;
       display: none;
       size:none;
     }
+    #coordinatebuttonDiv {
+      margin-top:30px;
+      margin-bottom:20px;
+    }
 
 }
 /* Styles */
 }
 </style>
-  
-  <div id="SpaceTab" class="tabcontent">
+<div id="SpaceTab" class="tabcontent">
     <div id="space">
       <img id="spaceMap" style="width: 65%;">
     </div>
@@ -299,56 +303,54 @@ background-color:#000000;
   
     </script>
   
-    <div id="coordinatebuttonDiv" style="text-align: center; margin-top: 3%;">
+    <div id="coordinatebuttonDiv" style="text-align: center; padding-top:3%;padding-bottom:5%;">
       <a style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickCoordinate()" id="CoordinateButton">COORDINATES</a>
     </div>
-    <div id="spaceLabels" style="overflow-x:auto;">
-      <table style="table-layout: fixed; width: 85%; text-align: left;  " align="center">
-          <tr>
-            <th style="vertical-align:top"><ul class="legendcontent">
-              <li><div class="box artite"></div>ARTITE</li>
-              <li><div class="box space-cccp"></div>CCCP</li>
-              <li><div class="box space-fci"></div>CONFEDERATE IMPERIUM</li>
-              <li><div class="box equo-stek"></div>EQUISIAN-STEK ZONE</li>
-              <li><div class="box space-ginger"></div>GINGERLANDZ</li>
-              <li><div class="box space-lop"></div>LEGION OF PEACE</li>
-            </ul></th>
-            
-            <th style="vertical-align:top"><ul class="legendcontent">
-              <li><div class="box space-mant"></div>MANTEÑOS</li>
-              <li><div class="box NEF"></div>NEF</li>
-              <li><div class="box space-PGF"></div>PINO GRAND FENWICK</li>
-              <li><div class="box space-RDA"></div>REPUBLIC DEFENCE ARMY</li>
-              <li><div class="box stek"></div>STEKARUS</li>
-              <li><div class="box space-mark"></div>TEUTIONIA</li>
-            </ul></th>
-            
-            <th style="vertical-align:top"><ul class="legendcontent">
-              <li><div class="box space-ugr"></div>THE GREATER REPUBLICS</li>
-              <li><div class="box space-ash"></div>THE UNITED LANDS OF ASH</li>
-              <li><div class="box space-tribes"></div>21 TRIBES</li>
-              <li><div class="box space-upr"></div>REPUBLICA</li>
-              <li><div class="box space-ws"></div>SUBURBIA PURLIEU</li>
-              <li><div class="box AV"></div>AVANT VANGUARD</li>
-            </ul></th>
-            <th style="vertical-align:top"><ul class="legendcontent">
-              <li><div class="box fuchsia"></div>FUCHSIA</li>
-              <li><div class="box icc"></div>ICC</li>
-              <li><div class="box fydoria"></div>FYDORIA</li>
-            </ul></th>
-          </tr>
-      </table>
-      <div id="spaceDate" class="legendcontent">
-      	<p>Updated 27th March 2018</p>
+
+
+  <div id="table">
+     <div class="newHeadings">
+        <ul class="list">
+                <li><div class="box artite"></div>ARTITE</li>
+                <li><div class="box space-cccp"></div>CCCP</li>
+                <li><div class="box space-fci"></div>CONFEDERATE IMPERIUM</li>
+                <li><div class="box equo-stek"></div>EQUISIAN-STEK ZONE</li>
+                <li><div class="box space-ginger"></div>GINGERLANDZ</li>
+                <li><div class="box space-lop"></div>LEGION OF PEACE</li>
+        </ul>
+     </div>
+     <div class="newHeadings">
+        <ul class="list">
+                <li><div class="box space-mant"></div>MANTEÑOS</li>
+                <li><div class="box NEF"></div>NEF</li>
+                <li><div class="box space-PGF"></div>PINO GRAND FENWICK</li>
+                <li><div class="box space-RDA"></div>REPUBLIC DEFENCE ARMY</li>
+                <li><div class="box stek"></div>STEKARUS</li>
+                <li><div class="box space-mark"></div>TEUTIONIA</li>
+        </ul>
+     </div>
+     <div class="newHeadings">
+        <ul class="list">
+                <li><div class="box space-ugr"></div>THE GREATER REPUBLICS</li>
+                <li><div class="box space-ash"></div>THE UNITED LANDS OF ASH</li>
+                <li><div class="box space-tribes"></div>21 TRIBES</li>
+                <li><div class="box space-upr"></div>REPUBLICA</li>
+                <li><div class="box space-ws"></div>SUBURBIA PURLIEU</li>
+                <li><div class="box AV"></div>AVANT VANGUARD</li>
+        </ul>
+     </div>
+     <div class="newHeadings">
+        <ul class="list">
+                <li><div class="box fuchsia"></div>FUCHSIA</li>
+                <li><div class="box icc"></div>ICC</li>
+                <li><div class="box fydoria"></div>FYDORIA</li>
+        </ul>
+     </div>
+     <div id="spaceDate" class="legendcontent">
+        <p>Updated 27th March 2018</p>
       </div>
-    </div>
   </div>
-  
-  <div id="InfoTab" class="tabcontent">
-    <div id="claim">
-      <h1>WIP, DON'T MIND ME</h1>
-    </div>
-  </div>
+</div>
     
   <style>
   #claim {
@@ -642,13 +644,13 @@ background-color:#000000;
       background: #2447db;
     }
     .fuchsia {
-    	background: #90297f;
+      background: #90297f;
     }
     .fydoria {
-    	background: #3744c4;
+      background: #3744c4;
     }
     .icc {
-    	background: #009966;
+      background: #009966;
     }
     #spaceButton {
       background-color: #000000;
@@ -715,8 +717,6 @@ background-color:#000000;
     .tabcontent {
       display: none;
       border-top: none;
-    }
-    .tabcontent {
       -webkit-animation: fadeEffect 0.5s;
       animation: fadeEffect 0.5s;
     }
